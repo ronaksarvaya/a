@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Students>
+	<student1 id="1" name ="abc"></student1>
+	<student2 id="2" name ="xyz"></student2>
+	<student3 id="3" name ="xyz"></student3>
+	<student4 id="4" name ="xyz"></student4>
+
+	<College>
+		<student1 id="10" name ="abc"></student1>
+		<student2 id="20" name ="xyz"></student2>
+		<student3 id="30" name ="xyz"></student3>
+		<student4 id="40" name ="xyz"></student4>
+	</College>
+</Students>

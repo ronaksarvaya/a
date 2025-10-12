@@ -1,0 +1,8 @@
+Step 1: Right click on your project and select add new-item: (Web Forms Master Page) - not web forms with masterpage
+Step 2: open Site1.Master file and design your masterpage (Header, contentPlaceholder, footer). 
+Step 3: For theme -> Right Click on project - add - Add ASP.NET folder - theme 
+Step 4: Right click on your theme package name add 2 files. 
+    1. Stylesheet (styling text) - write styles for header, body, footer
+    2. Skin file (Right click on theme - add - Web Forms Skin File) - Write Stypes for all button (Drag button and write styles in it, remove ID of it to apply on all buttons)
+Step 5: create a WebForm With Master Page - Select Site1.Master and add this in first line: EnableTheming="true" Theme="Theme1" - then write content to this page in contentPlaceholder(Drag 2 btns and write text) to show between header & footer
+Step 6: Run Created WebForm

@@ -1,0 +1,4 @@
+Step 1: Crete WebForm
+Step 2: Add img1.png to root directory (any image)
+Step 3: Write content of prac_3a.aspx
+Step 4: To write content of prac_3b.aspx.cs - open design view of prac_3a.aspx then double click on each element, it will open a block in prac_3b.aspx.cs file to write code about the element.

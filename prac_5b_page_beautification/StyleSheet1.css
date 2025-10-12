@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+}
+.header{
+    border: thick solid #ff0000;
+    height: 200px;
+    background-color: #eef109;
+}
+.footer{
+    border: thick solid #b41cac;
+    height: 200px;
+    background-color: #cf2424;
+}
