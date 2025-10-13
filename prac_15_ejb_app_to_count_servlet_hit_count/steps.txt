@@ -1,0 +1,7 @@
+Step 1: Create Java EE -> select enterprise application
+Step 2: on the coffee bean folder -> right click -> new -> session bean name: "NewSessionBean" -> select "singleton" in session type -> package name mei kuch bhi -> finish.
+Step 3: In Created Bean file, initialize count var, and insert 2 bussiness method (getCount, increment)
+Step 4: In the War folder -> right click -> new -> servlet name: "NewServlet" -> in "NewServlet" class rightclick -> insert code -> call enterprise bean -> select bean wala folder and file: "NewSessionBean" inside it -> ok
+Step 5: Then write code in "processRequest" method about user hit count
+Step 5: Right click on the triangle folder -> cleand and build -> then deploy -> then run -> url mai /apne servlet ka naam (e.g: http://localhost:8080/prac_15-war/NewServlet)
+Step 6: Do refresh and check count increment

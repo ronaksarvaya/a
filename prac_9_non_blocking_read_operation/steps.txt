@@ -1,0 +1,5 @@
+Step 1: Right click on "Web Pages" -> New -> Search "Empty File in others folder" -> create ReadFile.txt and add some text
+Step 2: Create Servlet page.
+Step 3: In Servlet page, remove that entire existing try block
+Step 4: Open the encapsulated code of doGet() add non blocking code inside it.
+Step 5: Save and run.

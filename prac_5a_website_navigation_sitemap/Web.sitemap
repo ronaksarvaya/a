@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="Form1.aspx" title="Java"  description="Java Program">
-    <siteMapNode url="Form2.aspx" title="Python"  description="Python Program" />
-    <siteMapNode url="Form3.aspx" title="C++"  description="C++ Program" />
-  </siteMapNode>
-</siteMap>

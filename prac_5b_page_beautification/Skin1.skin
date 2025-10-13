@@ -1,8 +1,0 @@
-<asp:Button runat="server" 
-    BorderStyle = "Double"
-    Font-Bold = "True"
-    Font-Size = "Small"
-    ForeColor = "#FF9999"
-    Height = "30px"
-
-/>

@@ -1,4 +1,0 @@
-Step 1: Create WebForm
-Step 2: Copy paste 3 image in root dir.
-Step 3: Create XML file & and write content of it
-Step 4: In WebForm draq and drop adrotator component form toolbox and content to new datasource with that XML file.

@@ -1,8 +1,0 @@
-Step 1: Open Default.aspx 
-Step 2: Add main tag(remove content between <main></main>)
-Step 3: Drag menu and sitemap datasource 
-Step 4: Choose data source--sitemap datasource1 
-Step 5: Click on project name--add—webform (Total 3) 
-Step 6: Drag sitemap path on every webform page 
-Step 7: Create sitemap file (search "Site Map" and create) and add url(File name basically) and Title of all three form
-Step 8: Then run Default.aspx

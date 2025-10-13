@@ -1,0 +1,3 @@
+Step 1: Create servlet page
+Step 2: Write code of cookies for user count (while write we need to import - "import javax.servlet.http.Cookie;" - that can be done by clicking on error bulb icon while writing code)
+Step 3: To run this servlet, you need to right click on this servlet file name and Run File
