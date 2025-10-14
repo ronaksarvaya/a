@@ -1,8 +1,0 @@
-Step 1: New project -> Java EE -> next next finish
-Step 2: Bean folder pr rightclick -> new -> session bean name: "convertBean" -> choose stateful -> package name "com.my.com" or whatever you want -> finish 
-Step 3: Open "convertBean" session file -> inside the "convertBean" class right click -> insert code -> add business method twice - with float return (one for r2d (with parameter "r" in float), and second for d2r(with parameter "d" in float))
-Step 4: In War folder -> Web Pages -> index.html -> add form code (check action should be - action="CurrencyConverter")
-Step 5: Right click on War Folder -> New -> Servlet -> name: CurrencyConverter -> finish
-Step 6: In this "CurrencyConverter" servlet -> right click inside the "CurrencyConverter" class -> insert code -> call Enterprise Bean -> choose that bean in bean folder that we created in Bean folder previously.
-Step 7: Then write the code inside "processRequest" method (The logic of converting currency)
-Step 8: Right click on triangle shape folder -> Clean & build -> Deploy -> Run

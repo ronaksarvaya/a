@@ -1,5 +1,0 @@
-Step 1: Create form in index.html (in forms action="" add the Dispatcher servlet name as it is main logic of program) 
-Step 2: Create HTML page for welcome and write error message
-Step 3: Create Welcome Servlet page and write Welcome serverlet message
-Step 4: Create Dispatcher servlet page and write Dispatcher code - it is main logic of this program (while writing we need to import - "import javax.servlet.RequestDispatcher;" - that can be done by clicking on that error blub icon and import)
-Step 5: Run Program
