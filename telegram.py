@@ -44,3 +44,9 @@ print("I am Listening...")
 while True:
         time.sleep(5)
     
+#  sudo apt-get update.
+#  sudo apt-get upgrade.
+#  sudo reboot.
+#  sudo apt-get install python-pip3
+#  sudo pip3 install telepot.
+#  sudo reboot.
