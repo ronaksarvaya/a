@@ -1,0 +1,211 @@
+# camera
+# commands
+#  sudo reboot.
+#  sudo apt-get install python-picamera
+#  sudo apt-get install python3-picamera.
+#  sudo pip install picamera
+
+
+import time
+import picamera
+camera=picamera.PiCamera()
+camera.resolution=(1024,768)
+camera.start_Preview()
+time.sleep()
+camera.capture(“/home/Pi/Desktop/visitor/images%s.jpg”)
+camera.stop_preview()
+camera.close()
+
+
+-----------------
+
+# clock
+# rasb pi -> clock
+# pin 16  -> clock of timer
+# pin 18  -> DIO of timer
+# pin 4 -> vcc of timer
+# pin 6 gnd -> gnd of timer
+
+import sys
+import time
+import datetime
+import RPi.GPIO as GP
+import tm1637
+
+Display = tm1637.TM1637(23, 24, tm1637.BRIGHT_TYPICAL)
+Display.Clear()
+Display.SetBrightnes(1)
+
+while(True):
+    now = datetime.datetime.now()
+    hour = now.hour
+    minute = now.minute
+    second = now.second
+    currentime = [int(hour / 10), hour % 10, int(minute / 10), minute % 10]
+    Display.Show(currentime)
+    Display.ShowDoublepoint(second % 2)
+    time.sleep(1)
+
+----------------------------
+# home automation
+# Extracting the File: Web Browser → “http://webiopi.trouch.com/DOWNLOADS.html” → Extract the file 
+ 
+
+
+# Commands: 
+ 
+sudo apt-get update 
+sudo apt-get upgrade 
+ 
+cd /home/pi/Downloads      # Move to the downloaded folder 
+ 
+tar xvzf WebIOPi-0.7.1.tar.gz 
+ 
+cd WebIOPi-0.7.1 
+ 
+wget https://raw.githubusercontent.com/doublebind/raspi/master/webiopi-pi2bplus.patch 
+ 
+patch -p1 -i webiopi-pi2bplus.patch 
+ 
+sudo ./setup.sh 
+sudo reboot 
+sudo webiopi -d -c /etc/webiopi/config 
+sudo /etc/init.d/webiopi start 
+
+
+
+# Connections:
+    # Pin no.3(GPIO 2) → LED-1 of LED Module 
+    # Pin no.6(GND) → GND of LED Module 
+    # Ethernet Cable → RaspberryPi 
+
+
+# Web Control Process: Open Web Browser → “http://(URL):8000/” → User Name: (webiopi) → Password: (raspberry) → WebIOPI Main Menu → GPIO Header → (Control over the LED Module through the interface system showcasing the automation system structure)
+
+----------------------------------
+# blinking LED led 
+
+#rasb pi -> led module
+#pin 7 = led 1
+#pin 11 = led 2
+#pin 13 = led 3
+#pin 15 = led 4
+#pin 6 = GND
+
+
+
+import RPi.GPIO as GP
+import time
+GP.setmode(GP.BOARD)
+GP.setup(7, GP.OUT)
+GP.setup(11, GP.OUT)
+GP.setup(13, GP.OUT)
+GP.setup(15, GP.OUT)
+
+while(1):
+    GP.output(7, GP.HIGH)
+    time.sleep(0.2)
+    GP.output(11, GP.HIGH)
+    time.sleep(0.2)
+    GP.output(13, GP.HIGH)
+    time.sleep(0.2)
+    GP.output(15, GP.LOW)
+    time.sleep(0.2)
+    print("LED is on")
+    GP.cleanup()
+----------------------------------------------
+
+
+# rfid
+
+
+#  TXofCardReader -> RXofTTL
+#  GNDofCardReader -> GND of TTL
+# Red of Power Supply ->  VCC of CardReader
+# Black of Power Supply ->GNDofCardReader
+#  USB to TTLconvertor ->  Raspberry Pi
+
+import RPi.GPIO as GP
+import time
+import serial
+
+GP.setmode(GP.BOARD)
+
+def read_rfid():
+    ser = serial.Serial("/dev/ttyUSB0")
+    ser.baudrate = 9600
+    data = ser.read(12)
+    ser.close()
+    return data
+
+try:
+    while True:
+        id = read_rfid()
+        print(id)
+        if id == "123456789012":  # replace with actual RFID tag value
+            print("Access Granted")
+            time.sleep(2)
+        else:
+            print("Access Denied")
+            time.sleep(2)
+except KeyboardInterrupt:
+    print("Program stopped by user")
+finally:
+    GP.cleanup()
+
+
+----------------------------------
+# telegram
+
+
+# gpio pin 6  -> gnd led module
+
+# gpio pin 3 -> led 1
+
+# connect to internet also
+
+
+import time
+import datetime
+import RPi.GPIO as GP
+import telepot
+import sys
+
+def on(pin):
+    GP.output(pin, GP.HIGH)
+    return "LED ON"
+
+def off(pin):
+    GP.output(pin, GP.LOW)
+    return "LED OFF"
+
+GP.setmode(GP.BOARD)
+GP.setwarnings(False)
+GP.setup(3, GP.OUT)
+
+def handle(msg):
+    chat_id = msg['chat']['id']
+    command = msg['text']
+    print(f"Got command: {command}")
+
+    if command == '/on':
+        bot.sendMessage(chat_id, on(3))
+    elif command == '/off':
+        bot.sendMessage(chat_id, off(3))
+    else:
+        bot.sendMessage(chat_id, "Invalid command! Use /on or /off")
+
+bot = telepot.Bot('YOUR_BOT_TOKEN')  
+bot.message_loop(handle)
+
+print("I am Listening...")
+
+while True:
+        time.sleep(5)
+    
+#  sudo apt-get update.
+#  sudo apt-get upgrade.
+#  sudo reboot.
+#  sudo apt-get install python-pip3
+#  sudo pip3 install telepot.
+#  sudo reboot
