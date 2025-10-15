@@ -8,21 +8,21 @@
 
 import time
 import datetime
-# import RPi.GPIO as GP
+import RPi.GPIO as GP
 import telepot
 import sys
 
 def on(pin):
-    # GP.output(pin, GP.HIGH)
+    GP.output(pin, GP.HIGH)
     return "LED ON"
 
 def off(pin):
-    # GP.output(pin, GP.LOW)
+    GP.output(pin, GP.LOW)
     return "LED OFF"
 
-# GP.setmode(GP.BOARD)
-# GP.setwarnings(False)
-# GP.setup(3, GP.OUT)
+GP.setmode(GP.BOARD)
+GP.setwarnings(False)
+GP.setup(3, GP.OUT)
 
 def handle(msg):
     chat_id = msg['chat']['id']
