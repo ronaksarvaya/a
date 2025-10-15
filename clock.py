@@ -4,6 +4,11 @@
 # pin 4 -> vcc of timer
 # pin 6 gnd -> gnd of timer
 
+#in terminal
+#pip3 show tm1637
+#sudo pip3 install tm1637
+
+
 
 import time
 import datetime
