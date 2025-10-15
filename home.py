@@ -29,5 +29,6 @@ sudo /etc/init.d/webiopi start
     # Pin no.6(GND) → GND of LED Module 
     # Ethernet Cable → RaspberryPi 
 
-
 # Web Control Process: Open Web Browser → “http://(URL):8000/” → User Name: (webiopi) → Password: (raspberry) → WebIOPI Main Menu → GPIO Header → (Control over the LED Module through the interface system showcasing the automation system structure)
+
+#get ip add using:  hostname -I 
