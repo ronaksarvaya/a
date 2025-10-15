@@ -1,5 +1,9 @@
 
+# gpio pin 6  -> gnd led module
 
+# gpio pin 3 -> led 1
+
+# connect to internet also
 
 
 import time
@@ -38,9 +42,5 @@ bot.message_loop(handle)
 print("I am Listening...")
 
 while True:
-    try:
-        time.sleep(1)
-    except KeyboardInterrupt:
-        print("Program Interrupted")
-        # GP.cleanup()
-        sys.exit()
+        time.sleep(5)
+    
