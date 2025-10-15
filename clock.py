@@ -4,7 +4,7 @@
 # pin 4 -> vcc of timer
 # pin 6 gnd -> gnd of timer
 
-import sys
+
 import time
 import datetime
 import RPi.GPIO as GP
